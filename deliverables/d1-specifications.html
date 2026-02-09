@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>D1: Specifications</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Team E Project</div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html#intro">Introduction</a></li>
+                <li><a href="../index.html#weekly-reports">Weekly Reports</a></li>
+
+                <li class="nav-dropdown">
+                    <a href="../index.html#deliverables" class="nav-dropdown-trigger">Deliverables ▾</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="d1-specifications.html">D1: Specifications</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-dropdown">
+                    <a href="../index.html#team" class="nav-dropdown-trigger">Team ▾</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../index.html#contact">Contact</a></li>
+                        <li><a href="../index.html#client">Client</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../index.html#schedule">Schedule</a></li>
+                <li><a href="../index.html#rules">Team Rules</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">D1: Specifications</h1>
+            <p class="hero-subtitle">Deliverable</p>
+        </div>
+    </section>
+
+    <!-- Embedded PDF Viewer -->
+    <section class="section">
+        <div class="container">
+            <div class="pdf-viewer-block">
+                <div class="pdf-viewer-actions">
+                    <a class="btn btn-primary" href="pdfs/d1-specifications.pdf" download>
+                        Download PDF
+                    </a>
+                    <a class="btn" href="pdfs/d1-specifications.pdf" target="_blank" rel="noopener">
+                        Open in new tab
+                    </a>
+                </div>
+
+                <div class="pdf-embed">
+                    <iframe
+                        src="pdfs/d1-specifications.pdf"
+                        title="D1: Specifications PDF"
+                        loading="lazy"
+                    ></iframe>
+
+                    <!-- Fallback if iframe blocked -->
+                    <div class="pdf-fallback">
+                        <p>
+                            If the PDF preview doesn’t load, use the buttons above to download or open it in a new tab.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>
