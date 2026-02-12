@@ -219,18 +219,10 @@ body {
 }
 
 /* Weekly Reports */
-.weekly-reports-block {
-    background: var(--bg-white);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    padding: 2.5rem;
-    border: 1px solid var(--border-color);
-}
-
 .weekly-reports-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .weekly-report-card {
@@ -243,6 +235,7 @@ body {
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    width: 100%;
 }
 
 .weekly-report-card:hover {
