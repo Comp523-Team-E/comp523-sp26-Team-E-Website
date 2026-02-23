@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Architecture Diagram</title>
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- Page-specific styles for image fidelity + responsive layout -->
+    <style>
+        .diagram-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: var(--bg-white);
+        }
+
+        /* Keep a clean padded frame around the image */
+        .diagram-frame {
+            padding: 16px;
+            background: var(--bg-white);
+        }
+
+        /*
+          Preserve quality and dimensions:
+          - Never stretch; keep aspect ratio
+          - Let it scale down on small screens
+          - On large screens, allow up to a readable max width
+        */
+        .diagram-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 1200px; /* adjust if you want larger/smaller on wide displays */
+            margin: 0 auto;
+            object-fit: contain;
+            image-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Subtle caption styling */
+        .diagram-caption {
+            margin-top: 12px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        /* Optional: make the image clickable without looking like a blue link */
+        .diagram-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .diagram-link:focus-visible {
+            outline: 3px solid rgba(0,0,0,0.25);
+            outline-offset: 4px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Team E Project</div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html#intro">Home</a></li>
+                <li><a href="../index.html#weekly-reports">Weekly Reports</a></li>
+
+                <li class="nav-dropdown">
+                    <a href="../index.html#deliverables" class="nav-dropdown-trigger">Deliverables ▾</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="d1-specifications.html">D1: Specifications</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-dropdown">
+                    <a href="../index.html#assignments" class="nav-dropdown-trigger">Assignments ▾</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../assignments/ethics1.html">Ethics 1</a></li>
+                        <li><a href="../assignments/platform_selection.html">Platform Selection</a></li>
+                        <li><a href="../assignments/architecture_diagram.html">Architecture Diagram</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-dropdown">
+                    <a href="../index.html#team" class="nav-dropdown-trigger">Team ▾</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../index.html#contact">Contact</a></li>
+                        <li><a href="../index.html#client">Client</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../index.html#schedule">Schedule</a></li>
+                <li><a href="../index.html#rules">Team Rules</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Architecture Diagram</h1>
+            <p class="hero-subtitle">Assignment</p>
+        </div>
+    </section>
+
+    <!-- Architecture Diagram Image -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Architecture Diagram</h2>
+
+            <div class="weekly-reports-block">
+                <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom: 1.25rem;">
+                    <!-- Open full-size image in a new tab (useful for zooming) -->
+                    <a class="btn btn-primary" href="./pdfs/architecture_diagram.png" target="_blank" rel="noopener">
+                        Open Full Image
+                    </a>
+
+                    <!-- Optional: direct download -->
+                    <a class="btn" href="./pdfs/architecture_diagram.png" download
+                       style="background: var(--bg-light); color: var(--secondary-color); border: 1px solid var(--border-color);">
+                        Download Image
+                    </a>
+
+                    <a class="btn" href="../index.html#assignments"
+                       style="background: var(--bg-light); color: var(--secondary-color); border: 1px solid var(--border-color);">
+                        Back to Assignments
+                    </a>
+                </div>
+
+                <div class="diagram-card">
+                    <div class="diagram-frame">
+                        <a class="diagram-link" href="./pdfs/architecture_diagram.png" target="_blank" rel="noopener"
+                           aria-label="Open architecture diagram image in a new tab">
+                            <img
+                                class="diagram-img"
+                                src="./pdfs/architecture_diagram.png"
+                                alt="Architecture diagram for the media file markup project"
+                                loading="lazy"
+                            />
+                        </a>
+                        <p class="diagram-caption">
+                            Tip: click the diagram to open the full-resolution image in a new tab for zooming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>
