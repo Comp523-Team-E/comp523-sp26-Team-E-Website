@@ -10,50 +10,8 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Team E Project</div>
-            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#intro">Home</a></li>
-                <li><a href="#weekly-reports">Weekly Reports</a></li>
-
-                <!-- Deliverables dropdown (add items here + create matching pages under /deliverables/) -->
-                <li class="nav-dropdown">
-                    <a href="#deliverables" class="nav-dropdown-trigger">Deliverables ▾</a>
-                    <ul class="nav-dropdown-menu">
-                        <li><a href="deliverables/d1-specifications.html">D1: Specifications</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-dropdown">
-                    <a href="#assignments" class="nav-dropdown-trigger">Assignments ▾</a>
-                    <ul class="nav-dropdown-menu">
-                        <li><a href="assignments/ethics1.html">Ethics 1</a></li>
-                        <li><a href="assignments/platform_selection.html">Platform Selection</a></li>
-                        <li><a href="assignments/architecture_diagram.html">Architecture Diagram</a></li>
-                    </ul>
-                </li>
-
-                <!-- Team dropdown (Contact + Client) -->
-                <li class="nav-dropdown">
-                    <a href="#team" class="nav-dropdown-trigger">Team ▾</a>
-                    <ul class="nav-dropdown-menu">
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#client">Client</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#rules">Team Rules</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navigation (rendered by initNav() in script.js) -->
+    <nav class="navbar" id="main-nav" data-nav-root="."></nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -148,6 +106,11 @@
                     <div class="deliverable-icon" aria-hidden="true">📝</div>
                     <div class="deliverable-title">Architecture Diagram</div>
                     <div class="deliverable-meta">Architecture Diagram</div>
+                </a>
+                <a class="deliverable-card" href="assignments/midterm_presentation.html">
+                    <div class="deliverable-icon" aria-hidden="true">🎤</div>
+                    <div class="deliverable-title">Midterm Presentation</div>
+                    <div class="deliverable-meta">Midterm Assignment</div>
                 </a>
             </div>
         </div>

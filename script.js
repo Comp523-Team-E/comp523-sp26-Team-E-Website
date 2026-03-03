@@ -1,3 +1,60 @@
+// Shared navigation component — renders the nav bar on every page.
+// Each HTML file has <nav class="navbar" id="main-nav" data-nav-root="."></nav>
+// (use data-nav-root=".." for pages one directory level deep)
+function initNav() {
+    const nav = document.getElementById("main-nav");
+    if (!nav) return;
+
+    const root = nav.dataset.navRoot || ".";
+    // idx is the prefix for links that target sections on index.html
+    // On the root page (root=".") we use bare hash anchors; on subpages we prefix with ../index.html
+    const idx = root === "." ? "" : `${root}/index.html`;
+
+    nav.innerHTML = `
+        <div class="container">
+            <div class="nav-brand">Team E Project</div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="${idx}#intro">Home</a></li>
+                <li><a href="${idx}#weekly-reports">Weekly Reports</a></li>
+
+                <li class="nav-dropdown">
+                    <a href="${idx}#deliverables" class="nav-dropdown-trigger">Deliverables ▾</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="${root}/deliverables/d1-specifications.html">D1: Specifications</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-dropdown">
+                    <a href="${idx}#assignments" class="nav-dropdown-trigger">Assignments ▾</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="${root}/assignments/ethics1.html">Ethics 1</a></li>
+                        <li><a href="${root}/assignments/platform_selection.html">Platform Selection</a></li>
+                        <li><a href="${root}/assignments/architecture_diagram.html">Architecture Diagram</a></li>
+                        <li><a href="${root}/assignments/midterm_presentation.html">Midterm Presentation</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-dropdown">
+                    <a href="${idx}#team" class="nav-dropdown-trigger">Team ▾</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="${idx}#contact">Contact</a></li>
+                        <li><a href="${idx}#client">Client</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="${idx}#schedule">Schedule</a></li>
+                <li><a href="${idx}#rules">Team Rules</a></li>
+            </ul>
+        </div>
+    `;
+}
+initNav();
+
 // Smooth scrolling for navigation links (only for non-dropdown links, and not on mobile dropdown sub-links)
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -7,7 +64,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         }
 
         // Skip dropdown menu links on mobile - they're handled in DOMContentLoaded
-        if (window.innerWidth <= 768 && this.closest(".nav-dropdown-menu")) {
+        if (window.innerWidth <= 1024 && this.closest(".nav-dropdown-menu")) {
             return;
         }
 
@@ -108,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger.addEventListener(
                 "click",
                 (e) => {
-                    const isMobile = window.innerWidth <= 768;
+                    const isMobile = window.innerWidth <= 1024;
 
                     if (isMobile) {
                         e.preventDefault();
@@ -144,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const dropdownLinks = document.querySelectorAll(".nav-dropdown-menu a");
         dropdownLinks.forEach((link) => {
             link.addEventListener("click", (e) => {
-                const isMobile = window.innerWidth <= 768;
+                const isMobile = window.innerWidth <= 1024;
                 if (isMobile) {
                     const href = link.getAttribute("href");
                     if (href && href.startsWith("#")) {
@@ -171,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const regularNavLinks = document.querySelectorAll(".nav-menu > li > a:not(.nav-dropdown-trigger)");
         regularNavLinks.forEach((link) => {
             link.addEventListener("click", () => {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 1024) {
                     closeHamburgerMenu();
                 }
             });
@@ -179,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Close menu when clicking outside (mobile)
         document.addEventListener("click", (e) => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 1024) {
                 const isClickInsideNav = navMenu.contains(e.target);
                 const isClickOnHamburger = hamburger.contains(e.target);
 
