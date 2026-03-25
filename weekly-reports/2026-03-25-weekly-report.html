@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>3/4/26 Weekly Report</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <!-- Navigation (rendered by initNav() in script.js) -->
+    <nav class="navbar" id="main-nav" data-nav-root=".."></nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">3/4/26 Weekly Report</h1>
+            <p class="hero-subtitle">Team E - COMP 523 (Spring 26)</p>
+        </div>
+    </section>
+
+    <!-- Report -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Weekly Report</h2>
+
+            <div class="weekly-reports-block">
+                <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom: 1.25rem;">
+                    <a class="btn btn-primary" href="./pdfs/2026-03-25-weekly-report.pdf" download>
+                        Download PDF
+                    </a>
+                    <a class="btn" href="../index.html#weekly-reports" style="background: var(--bg-light); color: var(--secondary-color); border: 1px solid var(--border-color);">
+                        Back to Weekly Reports
+                    </a>
+                </div>
+
+                <!-- Embedded PDF viewer (Option A) -->
+                <div style="border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); background: var(--bg-white);">
+                    <iframe
+                        src="./pdfs/2026-03-25-weekly-report.pdf"
+                        title="03/25/26 Weekly Report PDF"
+                        style="width: 100%; height: 80vh; border: 0;"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+
+                <!-- Fallback -->
+                <p style="margin-top: 1rem; text-align:center; color: var(--text-light);">
+                    If the PDF does not display on your device, open it directly:
+                    <a href="./pdfs/2026-03-25-weekly-report.pdf" style="color: var(--primary-color); font-weight: 700; text-decoration: none;">
+                        View PDF
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>
