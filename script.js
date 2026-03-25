@@ -49,6 +49,7 @@ function initNav() {
 
                 <li><a href="${idx}#schedule">Schedule</a></li>
                 <li><a href="${idx}#rules">Team Rules</a></li>
+                <li><a href="https://github.com/Comp523-Team-E/Media-Markup" target="_blank">GitHub Repo</a></li>
             </ul>
         </div>
     `;
