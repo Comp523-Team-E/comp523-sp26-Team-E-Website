@@ -26,6 +26,7 @@ function initNav() {
                     <a href="${idx}#deliverables" class="nav-dropdown-trigger">Deliverables ▾</a>
                     <ul class="nav-dropdown-menu">
                         <li><a href="${root}/deliverables/d1-specifications.html">D1: Specifications</a></li>
+                        <li><a href="${root}/deliverables/d2-design.html">D2: Design Document</a></li>
                     </ul>
                 </li>
 
