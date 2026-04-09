@@ -37,6 +37,7 @@ function initNav() {
                         <li><a href="${root}/assignments/platform_selection.html">Platform Selection</a></li>
                         <li><a href="${root}/assignments/architecture_diagram.html">Architecture Diagram</a></li>
                         <li><a href="${root}/assignments/midterm_presentation.html">Midterm Presentation</a></li>
+                        <li><a href="${root}/assignments/tech_talk.html">Tech Talk</a></li>
                     </ul>
                 </li>
 
