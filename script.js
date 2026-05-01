@@ -31,6 +31,7 @@ function initNav() {
                         <li><a href="${root}/deliverables/d4-handoff.html">D4: Client Handoff Plan</a></li>
                         <li><a href="${root}/deliverables/d5-docs.html">D5: Documentation Plan</a></li>
                         <li><a href="${root}/deliverables/d6-final-pres.html">D6: Final Presentation</a></li>
+                        <li><a href="${root}/deliverables/d7-client-videos.html">D7: Client Videos</a></li>
                     </ul>
                 </li>
 
